@@ -1,0 +1,20 @@
+$color-black: #000;
+$color-white: #fff;
+$color-light-bg: #f5f8fa;
+$color-dark-bg: #001927;
+$color-primary-light: #00b6dc;
+$color-primary-dark: #002841;
+$color-text: #333333;
+
+$font-1: 'Helvetica', sans-serif;
+
+
+$breakpoints: (
+    mobile: 576px,
+    tablet: 767px,
+    laptop: 992px,
+    desktop: 1200px,
+    custom: 1400px,
+    custom2: 1650px,
+    custom3: 1900px
+) !default;

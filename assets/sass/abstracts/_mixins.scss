@@ -1,0 +1,52 @@
+@mixin stay-center($position) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flexSetup($direction, $justifyContent, $alignItems, $flexWrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
+  }
+
+@mixin media-up($key-up) {
+    @if NOT map-has-key($breakpoints, $key-up) {
+        @warn 'Mapa $breakpoints nie posiada klucz #{$key-up}';
+    }
+    $up: map-get($breakpoints, $key-up);
+
+    @media (min-width: $up) {
+        @content;
+    }
+}
+
+@mixin media-down($key-down) {
+    @if NOT map-has-key($breakpoints, $key-down) {
+        @warn 'Mapa $breakpoints nie posiada klucz #{$key-down}';
+    }
+    $down: map-get($breakpoints, $key-down) - 1px;
+
+    @media (max-width: $down) {
+        @content;
+    }
+}
+
+@mixin media-only($key-down, $key-up) {
+    @if NOT map-has-key($breakpoints, $key-down)  {
+        @warn 'Mapa $breakpoints nie posiada klucz #{$key-down}';
+    }
+
+    @if NOT map-has-key($breakpoints, $key-up)  {
+        @warn 'Mapa $breakpoints nie posiada klucz #{$key-up}';
+    }
+    $down: map-get($breakpoints, $key-down) - 1px;
+    $up: map-get($breakpoints, $key-up);
+
+    @media (min-width: $down) and (max-width: $up) {
+        @content;
+    }
+}

@@ -1,0 +1,52 @@
+.footer-box {
+  @include flexSetup(column, center, start, nowrap);
+  min-height: 460px;
+  font-family: $font-regular;
+  font-size: $font-15;
+  background-color: $color-dark-bg;
+  color: $color-white;
+  font-size: $font-15;
+  &__content {
+    @include flexSetup(row, space-between, start, nowrap);
+  }
+  &__address {
+    max-width: 100%;
+    @include media-up(desktop) {
+      max-width: 30%;
+    }
+    & p {
+      margin: 10px 0;
+    }
+  }
+  &__menu {
+    max-width: 100%;
+    @include flexSetup(column, start, start, nowrap);
+    @include media-up(mobile) {
+      @include flexSetup(row, flex-start, center, wrap);
+    }
+    @include media-up(tablet) {
+      @include flexSetup(row, space-around, center, nowrap);
+    }
+    @include media-up(dektop) {
+      max-width: 70%;
+    }
+    &__item {
+      margin: 10px 0;
+      @include media-up(mobile) {
+        margin: 10px 10px 10px 0;
+      }
+      & .submenu {
+        margin: 15px 0 0 0;
+        & li {
+          & a {
+            display: inline-block;
+            margin: 12px 0;
+            font-size: $font-15;
+            color: $color-white;
+
+          }
+        }
+      }
+    }
+  }
+}

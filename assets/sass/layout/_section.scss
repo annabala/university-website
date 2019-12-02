@@ -1,0 +1,17 @@
+.section {
+  @include flexSetup(column, center, center, nowrap);
+  height: 100vh;
+  &--flex {
+    @include flexSetup(column, center, center, nowrap);
+    @include media-up(tablet) {
+      @include flexSetup(row, space-between, flex-start, nowrap);
+    }
+  }
+  &__box-left, 
+  &__box-right {
+    max-width: 100%;
+    @include media-up(tablet) {
+      max-width: 50%;
+    }
+  } 
+}

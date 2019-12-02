@@ -1,0 +1,133 @@
+.section-form {
+  background-color: $color-light-bg;
+  font-family: $font-regular;
+  &__form {
+    width: 90%;
+    @include media-up(tablet) {
+      width: 580px;
+    }
+    margin: 30px auto 0;
+  }
+}
+
+.form__label {
+  display: inline-block;
+  color: #91a5b3;
+  font-size: 0.9375rem;
+  transition: all .2s ease;
+  z-index: 10;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.field-group {
+  @include flexSetup(column, center, center, nowrap);
+
+  @include media-up(tablet) {
+    @include flexSetup(row, center, center, nowrap);
+
+  }
+}
+.field--100 {
+  width: 100%;
+}
+.field--50 {
+  width: 100%;
+  @include media-up(tablet) {
+    width: 50%;
+  }
+}
+.field--50:first-of-type {
+  margin: 0;
+  @include media-up(tablet) {
+    margin: 0 10px 0 0;
+  }
+}
+.field--50:nth-of-type(2) {
+  margin: 0;
+  @include media-up(tablet) {
+    margin: 0 0 0 10px;
+  }
+}
+
+.input-container {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  position: relative;
+  background-color: $color-white;
+  @include media-up(tablet) {
+    height: 50px;
+  }
+}
+
+.input-container.textarea {
+  height: 160px;
+ }
+.input-container.submit,
+.input-container.agree  {
+  background-color: transparent;
+  box-shadow: none;
+}
+.input-container.agree {
+  @include flexSetup(row, center, flex-start, nowrap)
+}
+input[type="text"] {
+  height: 3.125rem;
+}
+input[type="text"], textarea {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  font: 0.9375rem $font-regular;
+  padding: 1.5rem 5px 5px 1rem;
+  color: #000;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  z-index: 20;
+  box-shadow: 0px 2px 8px rgba(145,154,159, 0.2);
+
+}
+textarea {
+  min-height: 160px;
+  font-size: 0.9375rem;
+}
+input[type="text"]:focus ~ label, input[type="text"]:valid ~ label, textarea:focus ~ label {
+  top: 14px;
+  font-size: 0.6875rem;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  margin: 0 auto;
+  width: 120px;
+  height: 60px;
+  color: #E0F2F1;
+  font-family: $font-extrabold;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  padding: 10px 0;
+  background-color: $color-primary-light;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  transition: all .3s ease;
+}
+
+input[type="submit"]:hover {
+  background: #00a3c6;
+  border: solid #007f9a;
+  border-width: 0 0 4px 0;
+}
+input[type="text"]:active,
+input[type="text"]:focus,
+textarea:focus {
+  box-shadow: none;
+}
+input[type="submit"]:active {
+  background: #009688;
+  border: solid transparent;
+  border-width: 0 0 0px 0;
+}

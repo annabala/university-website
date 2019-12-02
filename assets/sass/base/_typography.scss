@@ -1,31 +1,33 @@
-.h2 {
-    margin-bottom: 1rem;
-    font-size: 1.75em;
-    font-weight: 400;
+@font-face {
+  font-family: 'Muli';
+  src: url('/assets/fonts/Muli-Regular.ttf') format('truetype');
 
-    @include media-up(mobile) {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
+  }
+  @font-face {
+  font-family: 'Muli-semi';
+  src: url('/assets/fonts/Muli-SemiBold.ttf') format('truetype');
 
-    @include media-up(tablet) {
-        font-size: 2.5em;
-    }
+   }
+  @font-face {
+  font-family: 'Muli-bold';
+  src: url('/assets/fonts/Muli-Bold.ttf') format('truetype');
 
-    @include media-up(custom2) {
-        font-size: 3rem;
-    }
+  }
+  @font-face {
+  font-family: 'Muli-extrabold';
+  src: url('/assets/fonts/Muli-ExtraBold.ttf') format('truetype');
+
 }
 
-.p{
-    font-size: 1.125em;
-    line-height: 1.75em;
+body, html {
+  font-family: $font-regular;
+}
 
-    @include media-up(custom) {
-        font-size: 1.3125em;
-    }
+.h2 {
+  font-family: $font-extrabold;
+  font-size: 2.25rem;
+}
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+p {
+  font-size: 1.125rem;
 }

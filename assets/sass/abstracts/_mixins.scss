@@ -11,7 +11,7 @@
     justify-content: $justifyContent;
     align-items: $alignItems;
     flex-wrap: $flexWrap;
-  }
+}
 
 @mixin media-up($key-up) {
     @if NOT map-has-key($breakpoints, $key-up) {

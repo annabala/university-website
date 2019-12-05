@@ -405,11 +405,11 @@ input:-webkit-autofill {
     transition: margin .3s ease;
     display: inline-block; }
   .carousel__nav-next::before {
-    content: url("./assets/img/arrow-next.png"); }
+    content: url("assets/img/arrow-next.png"); }
   .carousel__nav-prev {
     margin: 0 10px 0 0; }
     .carousel__nav-prev::before {
-      content: url("./assets/img/arrow-prev.png"); }
+      content: url("assets/img/arrow-prev.png"); }
 
 .section-form {
   background-color: #f5f8fa;

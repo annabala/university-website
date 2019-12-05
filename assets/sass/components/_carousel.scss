@@ -162,14 +162,14 @@
     }
     &-next {
       &::before {
-        content: url('/assets/img/arrow-next.png');
+        content: url('assets/img/arrow-next.png');
       }
     }
     &-prev {
       margin: 0 10px 0 0;
 
       &::before {
-        content: url('/assets/img/arrow-prev.png');
+        content: url('assets/img/arrow-prev.png');
       }
     }
   }

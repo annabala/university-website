@@ -1,37 +1,13 @@
-@font-face {
-  font-family: 'Muli';
-  src: url('/assets/fonts/Muli-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Muli-extralight';
-  src: url('/assets/fonts/Muli-ExtraLight.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Muli-light';
-  src: url('/assets/fonts/Muli-Light.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Muli-semi';
-  src: url('/assets/fonts/Muli-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Muli-bold';
-  src: url('/assets/fonts/Muli-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Muli-extrabold';
-  src: url('/assets/fonts/Muli-ExtraBold.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap&subset=latin-ext');
 
 body,
 html {
-  font-family: $font-regular;
+  font-family: $font-main;
 }
 
 .h2 {
-  font-family: $font-extrabold;
+  font-family: $font-main;
+  font-weight: $font-extrabold;
   font-size: $font-36;
   // line-height: 3.75rem;
 }

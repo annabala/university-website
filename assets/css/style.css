@@ -405,11 +405,11 @@ input:-webkit-autofill {
     transition: margin .3s ease;
     display: inline-block; }
   .carousel__nav-next::before {
-    content: url("/assets/img/arrow-next.png"); }
+    content: url("assets/img/arrow-next.png"); }
   .carousel__nav-prev {
     margin: 0 10px 0 0; }
     .carousel__nav-prev::before {
-      content: url("/assets/img/arrow-prev.png"); }
+      content: url("assets/img/arrow-prev.png"); }
 
 .section-form {
   background-color: #f5f8fa;
@@ -677,7 +677,7 @@ input:-webkit-autofill {
       margin: 0; } }
   .section__box__modal-link::before {
     cursor: pointer;
-    content: url("/assets/img/play-button.png");
+    content: url("assets/img/play-button.png");
     display: inline-block;
     position: absolute;
     top: 50%;
@@ -871,7 +871,7 @@ input:-webkit-autofill {
         -webkit-transform: scaleY(1);
                 transform: scaleY(1); }
       .footer-box__menu__item::after {
-        content: url("/assets/img/arrow-down.svg");
+        content: url("assets/img/arrow-down.svg");
         -webkit-transform: rotate(90deg);
                 transform: rotate(90deg);
         display: inline-block;
@@ -1018,7 +1018,6 @@ input:-webkit-autofill {
       cursor: pointer;
       list-style-type: none;
       margin: 0 30px;
-      padding: 0 0 10px 0;
       -webkit-transition: -webkit-transform .4s ease;
       transition: -webkit-transform .4s ease;
       transition: transform .4s ease;
@@ -1144,7 +1143,7 @@ input:-webkit-autofill {
   .section__box__list-item {
     margin: 0 0 25px 25px; }
     .section__box__list-item::before {
-      content: url("/assets/img/arrow.png");
+      content: url("assets/img/arrow.png");
       display: inline-block;
       margin-left: -1.3em;
       width: 1.3em; }

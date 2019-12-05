@@ -1,5 +1,6 @@
 .footer-box {
   @include flexSetup(column, center, start, nowrap);
+  padding: 2rem 0;
   min-height: 460px;
   font-family: $font-regular;
   font-size: $font-15;
@@ -7,46 +8,122 @@
   color: $color-white;
   font-size: $font-15;
   &__content {
-    @include flexSetup(row, space-between, start, nowrap);
+    @include flexSetup(column, space-between, start, nowrap);
+    @include media-up(desktop) {
+      @include flexSetup(row, space-between, start, nowrap);
+    }
   }
   &__address {
-    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    @include flexSetup(column, space-around, center, wrap);
+    @include media-up(smallmobile) {
+    @include flexSetup(row, space-around, center, wrap);
+     text-align: left;
+    }
     @include media-up(desktop) {
-      max-width: 30%;
+      max-width: 25%;
+      @include flexSetup(column, end, start, wrap);
     }
     & p {
-      margin: 10px 0;
+      margin: 0;
+      line-height: 1.5rem;
+      @include media-up(desktop) {
+        margin: 5px 0;
+      }
     }
   }
   &__menu {
-    max-width: 100%;
+    width: 100%;
     @include flexSetup(column, start, start, nowrap);
     @include media-up(mobile) {
       @include flexSetup(row, flex-start, center, wrap);
     }
     @include media-up(tablet) {
-      @include flexSetup(row, space-around, center, nowrap);
+      @include flexSetup(row, space-between, end, nowrap);
     }
     @include media-up(dektop) {
       max-width: 70%;
     }
     &__item {
       margin: 10px 0;
+      font-family: $font-extrabold;
+      font-size: $font-18;
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      @include media-up(tablet) {
+        font-size: $font-15;
+        font-family: $font-regular;
+        width: auto;
+      }
+      &::after {
+        content: url('/assets/img/arrow-down.svg');
+        transform: rotate(90deg);
+        display: inline-block;
+        width: 20px;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        transition: all .3s ease;
+        @include media-up(tablet) {
+          display: none;
+        }
+      }
+      &--active::after {
+        transform: rotate(-90deg);
+      }
       @include media-up(mobile) {
         margin: 10px 10px 10px 0;
       }
+      @include media-up(laptop) {
+        font-family: $font-regular;
+        cursor: default;
+      }
       & .submenu {
         margin: 15px 0 0 0;
+        display: none;
+        height: 0;
+        @include media-up(tablet) {
+          display: block;
+          height: auto;
+        }
+        &.submenu-show {
+          display: block;
+          height: auto;
+        }
         & li {
           & a {
             display: inline-block;
-            margin: 12px 0;
+            margin: 8px 0;
             font-size: $font-15;
             color: $color-white;
-
+            font-family: $font-regular;
+            @include media-up(tablet) {
+              margin: 12px 0;
+            }
           }
         }
       }
+      
     }
+  }
+  & .copy {
+    margin: 10px 0 0 0;
+    font-size: $font-12;
+    @include media-up(mobile) {
+      font-size: $font-15;
+    }
+  }
+}
+
+#map {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background-color: $color-light-bg;
+  @include media-up(mobile) {
+    margin: 10px 0;
   }
 }

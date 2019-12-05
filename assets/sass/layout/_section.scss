@@ -1,17 +1,76 @@
 .section {
-  @include flexSetup(column, center, center, nowrap);
-  height: 100vh;
+  min-height: 100vh;
+  padding: 3rem 0;
+  @include media-up(laptop) {
+    padding: 6rem 0;
+  }
+  @include media-up(desktop) {
+    padding: 13rem 0;
+  }
   &--flex {
     @include flexSetup(column, center, center, nowrap);
-    @include media-up(tablet) {
+    @include media-up(laptop) {
       @include flexSetup(row, space-between, flex-start, nowrap);
     }
   }
   &__box-left, 
   &__box-right {
     max-width: 100%;
-    @include media-up(tablet) {
+    padding: 0 15px;
+    // @include media-up(tablet) {
+    //   max-width: 100%;
+    // }
+    @include media-up(laptop) {
       max-width: 50%;
     }
-  } 
+  }
+  &__box__heading2 {
+    color: $color-primary-dark;
+    margin: 0 0 30px 0;
+  }
+  &__box__p {
+    margin: 0 0 30px 0;
+    & a {
+      color: $color-primary-light;
+    }
+  }
+  &__box-image {
+    box-shadow: -5px 5px 8px rgba(145, 154, 159, 0.4);
+    margin: 20px 0 0 0;
+    @include media-up(laptop) {
+      margin: 0;
+    }
+  }
+  &__box-image.video {
+    box-shadow: -5px 5px 8px rgba(145, 154, 159, 0.4);
+    margin: 0;
+  }
+  &__box__list {
+    &-title {
+      margin: 0 0 20px 0;
+    }
+    &-item {
+      margin: 0 0 25px 25px;
+      &::before {
+        content: url('/assets/img/arrow.png');
+        display: inline-block;
+        margin-left: -1.3em;
+        width: 1.3em;
+      } 
+    }
+  }
+}
+#secTwo {
+  & .section__box-left {
+    order: 1;
+    @include media-up(laptop) {
+      order: 0;
+    }
+  }
+  & .section__box-right {
+    order: 0;
+    @include media-up(laptop) {
+      order: 1;
+    }
+  }
 }

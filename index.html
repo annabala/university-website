@@ -15,7 +15,7 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar__box">
-          <a class="navbar__brand p-0 m-0" href=""><img src="assets/img/logo.png" class="navbar__img img-fluid"
+          <a class="navbar__brand p-0 m-0" href=""><img src="assets/img/logo.png" class="navbar__logo img-fluid"
               alt="The University logo"></a>
           <input id="navbar-toggle" type="checkbox" class="navbar__btn">
           <label for="navbar-toggle" class="navbar__icon">
@@ -52,82 +52,76 @@
         </div>
       </div>
     </nav>
-    <section class="section-hero">
-      <div id="carousel-hero" class="carousel-university">
-
-        <div class="carousel-university__inner" role="listbox">
-
-          <div class="carousel-university__item">
-
-            <img src="assets/img/slider-img.png" alt="zdjęcie podstrony" class="d-block img-fluid carousel-img">
-
-            <div class="carousel-university__item-caption">
-              <div>
-                <h2 class="">Będziesz się uczyć z ciekawoscia</h2>
-                <p class="">Obiecujemy</p>
-                <a href="" class="">Zobacz więcej</a>
-                <a href="" class="">Umow się z aniołem</a>
+    <section id="secHero" class="section-hero">
+      <div id="carousel-hero" class="carousel">
+        <div class="carousel__inner">
+          <div class="carousel__item current">
+            <img src="assets/img/slider-img1.png" alt="zdjęcie podstrony" class="d-block img-fluid carousel-img">
+            <div class="carousel__item-caption container">
+              <h1 class="carousel__item-text h1">Będziesz się uczyć z ciekawością</h1>
+              <p class="carousel__item-text p-color">Obiecujemy</p>
+              <div class="carousel__item-box-link text-center">
+                <a href="" class="btn carousel__item-link white">Zobacz więcej</a>
+                <a href="" class="btn carousel__item-link">Umów się z aniołem</a>
               </div>
             </div>
           </div>
-          <div class="carousel-university__item">
-
-            <img src="assets/img/slider-img.png" alt="zdjęcie podstrony" class="d-block img-fluid carousel-img">
-
-            <div class="carousel-university__item-caption">
-              <div>
-                <h2 class="">Będziesz się uczyć z ciekawoscia</h2>
-                <p class="">Obiecujemy</p>
-                <a href="" class="">Zobacz więcej</a>
-                <a href="" class="">Umow się z aniołem</a>
+          <div class="carousel__item">
+            <img src="assets/img/slider-img2.jpg" alt="zdjęcie podstrony" class="d-block img-fluid carousel-img">
+            <div class="carousel__item-caption container">
+              <h1 class="carousel__item-text h1">Będziesz się uczyć z ciekawością</h1>
+              <p class="carousel__item-text p-color">Obiecujemy</p>
+              <div class="carousel__item-box-link">
+                <a href="" class="btn carousel__item-link white">Zobacz więcej</a>
+                <a href="" class="btn carousel__item-link">Umów się z aniołem</a>
               </div>
             </div>
-
           </div>
-          <div class="carousel-university__item">
-
-            <img src="assets/img/slider-img.png" alt="zdjęcie podstrony" class="d-block img-fluid carousel-img">
-
-            <div class="carousel-university__item-caption">
-              <div>
-                <h2 class="">Będziesz się uczyć z ciekawoscia</h2>
-                <p class="">Obiecujemy</p>
-                <a href="" class="">Zobacz więcej</a>
-                <a href="" class="">Umow się z aniołem</a>
+          <div class="carousel__item">
+            <img src="assets/img/slider-img3.jpg" alt="zdjęcie podstrony" class="d-block img-fluid carousel-img">
+            <div class="carousel__item-caption container">
+              <h1 class="carousel__item-text h1">Będziesz się uczyć z ciekawością</h1>
+              <p class="carousel__item-text p-color">Obiecujemy</p>
+              <div class="carousel__item-box-link">
+                <a href="" class="btn carousel__item-link white">Zobacz więcej</a>
+                <a href="" class="btn carousel__item-link">Umów się z aniołem</a>
               </div>
             </div>
-
           </div>
-          <div class="carousel-university__item">
-
-            <img src="assets/img/slider-img.png" alt="zdjęcie podstrony" class="d-block img-fluid carousel-img">
-
-            <div class="carousel-university__item-caption">
-              <div>
-                <h2 class="">Będziesz się uczyć z ciekawoscia</h2>
-                <p class="">Obiecujemy</p>
-                <a href="" class="">Zobacz więcej</a>
-                <a href="" class="">Umow się z aniołem</a>
+          <div class="carousel__item">
+            <img src="assets/img/slider-img4.jpg" alt="zdjęcie podstrony" class="d-block img-fluid carousel-img">
+            <div class="carousel__item-caption container">
+              <h1 class="carousel__item-text h1">Będziesz się uczyć z ciekawością</h1>
+              <p class="carousel__item-text p-color">Obiecujemy</p>
+              <div class="carousel__item-box-link">
+                <a href="" class="btn carousel__item-link white">Zobacz więcej</a>
+                <a href="" class="btn carousel__item-link transparent">Umów się z aniołem</a>
               </div>
             </div>
-
-          </div>
-          <div class="carousel-university__dot"></div>
-          <div class="carousel-university__nav">
-            <button id="btnPrev">Prev</button>
-            <button id="btnNext">Next</button>
           </div>
         </div>
-      </div>
+        <div class="carousel__dots">
+          <button class="carousel__indicator current"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
+        </div>
+        <div class="carousel__nav">
+          <div class="carousel__nav-buttons">
+            <button id="btnPrev" class="btn carousel__nav-prev"></button>
+            <button id="btnNext" class="btn carousel__nav-next"></button>
+          </div>
+        </div>
     </section>
     <section id="secOne" class="section section-one">
       <div class="container section--flex">
-        <div class="section__box-left">
+        <div class="section__box-left intro-text">
           <h2 class="h2 section__box__heading2">Dla kogo?</h2>
-          <p class="box__p p">Dedykowane nauczycielom posiadającym przygotowanie pedagogiczne, którzy chcą uzyskać
+          <p class="section__box__p p">Dedykowane nauczycielom posiadającym przygotowanie pedagogiczne, którzy chcą
+            uzyskać
             merytoryczne i metodyczne przygotowanie do nauczania kolejnego przedmiotu - Geografii.
           </p>
-          <p class="box__p p">
+          <p class="section__box__p p">
             Studia adresowane są do osób legitymujących się wyższym wykształceniem na poziomie studiów licencjackim o
             specjalnościach nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, lub słuchaczy
             legitymujących się wyższym wykształceniem na poziomie studiów magisterskich nadających kwalifikacje
@@ -135,28 +129,32 @@
             sierpnia 2017 r. w sprawie szczegółowych kwalifikacji wymaganych od nauczycieli <a href="">(Dz.U. 2017 poz.
               1575)</a>.
           </p>
-          <p class="box__p p">
+          <p class="section__box__list-title p">
             Wymagane od kandydata:
           </p>
-          <ul class="box__list">
-            <li class="box__list-item">
+          <ul class="section__box__list">
+            <li class="section__box__list-item">
               Ukończone studia wyższe
+            </li>
+            <li class="section__box__list-item">
+              Przygotowanie pedagogiczne
             </li>
           </ul>
         </div>
         <div class="section__box-right">
-          <img class="image img-fluid" src="/assets/img/img1.png" alt="osoba używającego globusa">
+          <img class="section__box-image img-fluid" src="assets/img/img1.png" alt="osoba używającego globusa">
         </div>
       </div>
     </section>
     <section id="secTwo" class="section section-two">
       <div class="container section--flex">
         <div class="section__box-left">
-          <img class="image img-fluid" src="/assets/img/img2.png" alt="osoba używającego globusa">
+          <img class="section__box-image img-fluid" src="assets/img/img2.png" alt="osoba używającego globusa">
         </div>
-        <div class="section__box-left">
+        <div class="section__box-right intro-text">
           <h2 class="h2 section__box__heading2">Po co?</h2>
-          <p class="box__p p">UW wie co zrobić, by programy proponowanych kierunków studiów były jak najbardziej
+          <p class="section__box__p p">UW wie co zrobić, by programy proponowanych kierunków studiów były jak
+            najbardziej
             atrakcyjne z biznesowego punktu widzenia. Do współpracy zapraszamy przedsiębiorców, trenerów, doświadczonych
             praktyków. Dbamy o to, żeby nasi studenci korzystali z doświadczenia i wiedzy osób, które odniosły w życiu
             zawodowy sukces. Dążymy do tego, by wybierający naszą uczelnię już w trakcie studiów mieli kontakt z jak
@@ -169,66 +167,84 @@
     </section>
     <section id="secThree" class="section section-three">
       <div class="container section--flex">
-        <div class="section__box-left">
+        <div class="section__box-left intro-text">
           <h2 class="h2 section__box__heading2">Z kim?</h2>
-          <p class="box__p p">Ciekawość jest najpotężniejszą cechą ludzką, która popycha ludzi do ciągłego rozwoju. CDV
+          <p class="section__box__p p">Ciekawość jest najpotężniejszą cechą ludzką, która popycha ludzi do ciągłego
+            rozwoju. CDV
             to
             miejsce, w którym studenci z zainteresowaniem i z przyjemnością zdobywają wiedzę. Zarówno studenci,
             absolwenci, jak i pracownicy to osoby nie tylko ciekawe świata, ale także pełne pasji w odkrywaniu nowych
             rzeczy i w pozytywny sposób wpływające na swoje otoczenie.
           </p>
-          <p class="box__p p">
+          <p class="section__box__p p">
             Nasze kierunki studiów są interesujące i innowacyjne, tworzone we współpracy z pracodawcami oraz na
             podstawie trendów w światowej gospodarce i kierunku zmian na dynamicznym rynku pracy. Nasi absolwenci
             znajdują pracę zgodną ze swoimi zainteresowaniami i wykształceniem.
           </p>
         </div>
         <div class="section__box-right">
-          <img class="image img-fluid" src="/assets/img/img3.png" alt="osoba używającego globusa">
+          <div class="section__box__modal">
+            <a href="#openvideo" class="section__box__modal-link">
+              <img class="section__box-image video img-fluid" src="assets/img/img3.png" alt="obrazek video">
+            </a>
+            <div id="openvideo" class="modal">
+              <!-- youtube widget -->
+              <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/668nUCeBHyY?autoplay=1"
+                frameborder="0" allowfullscreen></iframe>
+              <button type="button" class="btn modal-close">&#x2716;</button>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
     <section id="secForm" class="section section-form">
       <div class="container">
-        <p class="section_form__heading">Nie znalazłes odpowiedniego kontaktu?</p>
-        <p class="section_form__subheading font-light">Skorzystaj z formularza</p>
-        <form action="" id="form" class="section-form__form">
+        <p class="section-form__heading text-center">Nie znalazłes odpowiedniego kontaktu?</p>
+        <p class="section-form__subheading font-light text-center">Skorzystaj z formularza.</p>
+
+        <form method="post" action="data.php" id="contact-form" class="section-form__form">
           <fieldset>
             <div class="field-group">
-              <div class="field--50 input-container">
-                <input required type="text" id="name" />
+              <div class="field--50 input-container field-container">
+                <input required type="text" id="name" class="form-input" data-error="Wypełnij to pole"
+                  pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" />
                 <label class="form__label" for="name">Imię</label>
               </div>
-              <div class="field--50 input-container">
-                <input required type="text" id="lastname" />
+              <div class="field--50 input-container field-container">
+                <input required type="text" id="lastname" class="form-input" data-error="Wypełnij to pole"
+                  pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" />
                 <label class="form__label" for="lastname">Nazwisko</label>
               </div>
             </div>
             <div class="field-group">
-              <div class="field--100 input-container">
-                <input required type="text" id="email" />
-                <label class="form__label" for="email">Adres e-mail</label>
+              <div class="field--100 input-container field-container">
+                <input type="email" name="email" class="form-input" required id="email"
+                  data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                <label class="form__label" for="email">Email</label>
               </div>
             </div>
             <div class="field-group">
               <div class="field--100 field-container input-container textarea">
-                <textarea id="message"></textarea>
+                <textarea id="message" required class="form-input" data-error="Musisz wypełnić pole"
+                  pattern=".+"></textarea>
                 <label class="form__label" for="message">Treść wiadomości</label>
               </div>
             </div>
             <div class="field-group">
-              <div class="field--100 field-container input-container agree">
-                <input required type="checkbox" id="agreement" class="custom-checkbox" />
-                <label for="agreement" class="custom-label"></label>
-                <p>Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia 1997
+              <div class="field--100 field-container agree">
+                <input required type="checkbox" id="agreement" class="custom-checkbox"
+                  data-error="Musisz wypełnić pole" />
+                <label for="agreement" class="custom-label">
+                  Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia 1997
                   roku o ochronie danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w
                   celach marketingowych przez Collegium Da Vinci i oświadczam, iż podanie przeze mnie danych osobowych
                   jest dobrowolne oraz iż zostałem poinformowany o prawie żądania dostępu do moich danych osobowych, ich
-                  zmiany oraz usunięcia.</p>
+                  zmiany oraz usunięcia.</label>
               </div>
             </div>
             <div class="submit text-center">
-              <input type="submit" value="Wyślij" />
+              <button id="submit-form" class="button-submit" type="submit">Wyślij</button>
             </div>
           </fieldset>
         </form>
@@ -239,31 +255,39 @@
         <div class="footer-box__content">
           <div class="footer-box__address">
             <!-- Address widget here -->
-            <p>ul.Głogowska 10</p>
-            <p>61-719</p>
-            <p>tel. 61 27 11 000</p>
-            <div class="footer-box__map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.1958142863423!2d16.907801415949937!3d52.40312725263622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b32ff308f59%3A0x6c6642c3550b9e68!2sG%C5%82ogowska%2010%2C%2061-001%20Pozna%C5%84!5e0!3m2!1spl!2spl!4v1575325496677!5m2!1spl!2spl" width="200" height="200" frameborder="0" style="margin-top:45px;border:0;border-radius:50%" allowfullscreen=""></iframe>
+            <address class="footer-box__address-info">
+              <p>ul.Głogowska 10</p>
+              <p>61-719</p>
+              <p>tel. 61 27 11 000</p>
+            </address>
+            <div id="map" class="footer-box__map">
+              <script src="assets/js/map.js" defer></script>
+              <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLf3zcgYkxhKI2_U9rWPnDXxkbzpixwfw&callback=initMap">
+              </script>
             </div>
           </div>
           <ul class="footer-box__menu">
-            <li class="footer-box__menu__item">O nas
+            <li class="footer-box__menu__item parent">
+              <p>O nas</p>
               <ul class="submenu">
                 <li><a href="/" target="_self">Dlaczego CDV</a></li>
                 <li><a href="/" target="_self">Kadra naukowa</a></li>
-                <li><a href="/" target="_self">Dla mediow</a></li>
+                <li><a href="/" target="_self">Dla mediów</a></li>
                 <li><a href="/" target="_self">Kontakt</a></li>
               </ul>
             </li>
-            <li class="footer-box__menu__item">Dla kandydata
+            <li class="footer-box__menu__item parent">
+              <p>Dla kandydata</p>
               <ul class="submenu">
                 <li><a href="/" target="_self">Poradnik maturzysty</a></li>
                 <li><a href="/" target="_self">Rekrutacja</a></li>
                 <li><a href="/" target="_self">Kredyt studencki</a></li>
-                <li><a href="/" target="_self">Studia dla cudzoziemcow</a></li>
+                <li><a href="/" target="_self">Studia dla cudzoziemców</a></li>
               </ul>
             </li>
-            <li class="footer-box__menu__item">Dla studenta
+            <li class="footer-box__menu__item parent">
+              <p>Dla studenta</p>
               <ul class="submenu">
                 <li><a href="/" target="_self">Wirtualna Uczelnia</a></li>
                 <li><a href="/" target="_self">Stypendia</a></li>
@@ -271,15 +295,17 @@
                 <li><a href="/" target="_self">Studiuj dalej</a></li>
               </ul>
             </li>
-            <li class="footer-box__menu__item">Dla biznesu
+            <li class="footer-box__menu__item parent">
+              <p>Dla biznesu</p>
               <ul class="submenu">
-                <li><a href="/" target="_self">Wspolpraca z biznesem</a></li>
+                <li><a href="/" target="_self">Współpraca z biznesem</a></li>
                 <li><a href="/" target="_self">EmotionsLAB</a></li>
                 <li><a href="/" target="_self">Wynajem sal</a></li>
                 <li><a href="/" target="_self">Znajdź pracownika</a></li>
               </ul>
             </li>
-            <li class="footer-box__menu__item">Na skroty
+            <li class="footer-box__menu__item parent">
+              <p>Na skroty</p>
               <ul class="submenu">
                 <li><a href="/" target="_self">Aktualności</a></li>
                 <li><a href="/" target="_self">Wydarzenia</a></li>
@@ -293,7 +319,12 @@
       </div>
     </footer>
   </main>
+
+  <script src="assets/js/slider.js"></script>
+  <script src="assets/js/form.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/init.js"></script>
+
 </body>
 
 </html>

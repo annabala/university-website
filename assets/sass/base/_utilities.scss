@@ -3,6 +3,11 @@ a:hover {
   text-decoration: none;
 }
 
+.btn {
+  background-color: $color-white;
+  border: none;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -18,4 +23,40 @@ a:hover {
 
 .text-left {
   text-align: left;
+}
+.overlay {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent linear-gradient(0deg,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%) 0% 0% no-repeat padding-box;
+  z-index: 1;
+}
+
+.font-light {
+  color: $color-grey;
+}
+
+address {
+  font-style: normal;
+}
+
+.intro-text {
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .4s ease-out;
+}
+
+.intro-appear {
+  opacity: 1;
+  transform: translateY(0);
 }

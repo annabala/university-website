@@ -183,7 +183,7 @@
     };
     const myOptions = { zoom: 18, center: place, disableDefaultUI: true, styles: stylesArray};
     const map = new google.maps.Map(document.getElementById('map'), myOptions);
-    const icon = '/assets/img/marker.png';
+    const icon = 'assets/img/marker.png';
     var marker = new google.maps.Marker({
       position: place,
       map: map,

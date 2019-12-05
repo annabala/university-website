@@ -1,11 +1,9 @@
 .section {
-  min-height: 100vh;
+  min-height: auto;
   padding: 3rem 0;
-  @include media-up(laptop) {
-    padding: 6rem 0;
-  }
-  @include media-up(desktop) {
-    padding: 13rem 0;
+  @include flexSetup(row, center, center, nowrap);
+  @include media-up(tablet) {
+    min-height: 100vh;  
   }
   &--flex {
     @include flexSetup(column, center, center, nowrap);
@@ -17,9 +15,6 @@
   &__box-right {
     max-width: 100%;
     padding: 0 15px;
-    // @include media-up(tablet) {
-    //   max-width: 100%;
-    // }
     @include media-up(laptop) {
       max-width: 50%;
     }

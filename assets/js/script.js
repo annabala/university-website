@@ -1,6 +1,6 @@
 function changeNav() {
     let myNav = document.querySelector('.navbar');
-    let windowHeight = window.innerHeight - 50;
+    let windowHeight = 10;
     if (document.body.scrollTop >= windowHeight || document.documentElement.scrollTop >= windowHeight) {
         myNav.classList.add("navbar-background");
         myNav.classList.remove("navbar-transparent");

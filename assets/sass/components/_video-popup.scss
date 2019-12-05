@@ -1,4 +1,4 @@
-.section-three {
+.section-three .section--flex{
   position: relative;
 }
 .section__box__modal {
@@ -8,7 +8,7 @@
       cursor: pointer;
       position: absolute;
       right: 50%;
-      top: 20%;
+      top: -15%;
       transform: translate(50%, 0%);
       color: #E0F2F1;
       font-family: "Muli-semibold";
@@ -73,6 +73,7 @@
   }
 }
 .section__box__modal.section__box__modal-open {
+  position: relative;
   & .modal {
     display: block;
     width: 100%;
@@ -84,6 +85,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      @include media-up(laptop) {
+        left: 0%;
+      }
     }
   }
   & .section__box__modal-link {

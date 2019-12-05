@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initForm();
   window.addEventListener('scroll', debounce(() => {
     textAppear();
-  }, 200));
+  }, 100));
   window.addEventListener('scroll', debounce(() => {
     changeNav();
   }, 300));

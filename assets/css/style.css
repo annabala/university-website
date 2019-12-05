@@ -405,11 +405,11 @@ input:-webkit-autofill {
     transition: margin .3s ease;
     display: inline-block; }
   .carousel__nav-next::before {
-    content: url("assets/img/arrow-next.png"); }
+    content: url("../img/arrow-next.png"); }
   .carousel__nav-prev {
     margin: 0 10px 0 0; }
     .carousel__nav-prev::before {
-      content: url("assets/img/arrow-prev.png"); }
+      content: url("../img/arrow-prev.png"); }
 
 .section-form {
   background-color: #f5f8fa;
@@ -677,7 +677,7 @@ input:-webkit-autofill {
       margin: 0; } }
   .section__box__modal-link::before {
     cursor: pointer;
-    content: url("assets/img/play-button.png");
+    content: url("../img/play-button.png");
     display: inline-block;
     position: absolute;
     top: 50%;
@@ -871,7 +871,7 @@ input:-webkit-autofill {
             -webkit-transform: scaleY(1);
                     transform: scaleY(1); } }
       .footer-box__menu__item::after {
-        content: url("assets/img/arrow-down.svg");
+        content: url("../img/arrow-down.svg");
         -webkit-transform: rotate(90deg);
                 transform: rotate(90deg);
         display: inline-block;

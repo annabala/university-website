@@ -59,13 +59,11 @@
         }
 
         &-item {
+            cursor: pointer;
             list-style-type: none;
-            margin: 20px;
-            padding: 0 0 2px 0;
-            transition: all .4s ease;
-            &:hover {
-                border-bottom: 2px solid $color-white;
-            }
+            margin: 0 30px;
+            padding: 0 0 10px 0;
+            transition: transform .4s ease;
             &:nth-of-type(even):hover {
                 transform: scale(1.15) rotate(2deg);
             }

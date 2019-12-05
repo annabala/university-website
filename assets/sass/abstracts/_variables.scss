@@ -5,16 +5,26 @@ $color-dark-bg: #001927;
 $color-primary-light: #00b6dc;
 $color-primary-dark: #002841;
 $color-text: #333333;
+$color-active: #ffcd19;
+$color-grey: #91a5b3;
 
+$font-extralight: 'Muli-extralight';
+$font-light: 'Muli-light';
 $font-regular: 'Muli', sans-serif;
 $font-semi: 'Muli-semi';
 $font-bold: 'Muli-bold';
 $font-extrabold: 'Muli-extrabold';
 
-
+$font-12: 0.75rem;
+$font-14: 0.875rem;
 $font-15: 0.9375rem;
+$font-16: 1rem;
+$font-18: 1.125rem;
+$font-36: 2.25rem;
+
 
 $breakpoints: (
+    smallmobile: 425px,
     mobile: 576px,
     tablet: 767px,
     laptop: 992px,

@@ -13,6 +13,11 @@
     flex-wrap: $flexWrap;
 }
 
+@mixin font-size($size) {
+    font-size:$size;
+    font-size: ($size / 16px) * 1rem;
+}
+
 @mixin media-up($key-up) {
     @if NOT map-has-key($breakpoints, $key-up) {
         @warn 'Mapa $breakpoints nie posiada klucz #{$key-up}';

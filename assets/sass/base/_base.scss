@@ -10,13 +10,15 @@ html, body {
 
 .container {
     width: 100%;
-    max-width: 90%;
     margin: 0 auto;
-    @include media-up(custom2) {
+    padding: 0 15px;
+    @include media-up(tablet) {
+        max-width: 750px;
+    }
+    @include media-up(laptop) {
+        max-width: 920px;
+    }
+    @include media-up(desktop) {
         max-width: 1187px;
     }
-}
-
-section {
-    height: 100vh;
 }

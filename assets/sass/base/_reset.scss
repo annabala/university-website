@@ -45,3 +45,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+html, body {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1920px;
+}
+
+input:-webkit-autofill {
+	background-color: transparent !important;
+}
+#email:-webkit-autofill {
+	background-color: white !important;
+}

@@ -78,7 +78,7 @@
         }
 
       &::after {
-        content: url('assets/img/arrow-down.svg');
+        content: url('../img/arrow-down.svg');
         transform: rotate(90deg);
         display: inline-block;
         width: 20px;

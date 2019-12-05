@@ -41,7 +41,7 @@
     }
     &::before {
       cursor: pointer;
-      content: url('assets/img/play-button.png');
+      content: url('../img/play-button.png');
       display: inline-block;
       @include stay-center(absolute);
       z-index: 2;

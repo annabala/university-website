@@ -25,6 +25,7 @@ function textAppear() {
 
 function modalShow() {
     let mainEl = document.getElementsByTagName('main')[0];
+    let bodyEl = document.getElementsByTagName('body')[0]
     let openLink = document.querySelector('.section__box__modal-link');
     let modalContainer = document.querySelector('.section__box__modal');
     let closeLink = document.querySelector('.modal-close');
@@ -32,12 +33,14 @@ function modalShow() {
     openLink.addEventListener('click', (e) => {
         e.preventDefault();
         mainEl.classList.add('overlay');
+        bodyEl.classList.add('hide-scroll');
         modalContainer.classList.add('section__box__modal-open');
 
     }, false);
 
     closeLink.addEventListener('click', () => {
         mainEl.classList.remove('overlay');
+        bodyEl.classList.remove('hide-scroll');
         modalContainer.classList.remove('section__box__modal-open');
     });
     document.addEventListener('keydown', (e) => {

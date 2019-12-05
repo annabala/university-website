@@ -61,8 +61,11 @@
         &-item {
             cursor: pointer;
             list-style-type: none;
-            margin: 0 30px;
+            margin: 30px;
             transition: transform .4s ease;
+            @include media-up(laptop) {
+                margin: 0 30px;
+            }
             &:nth-of-type(even):hover {
                 transform: scale(1.15) rotate(2deg);
             }

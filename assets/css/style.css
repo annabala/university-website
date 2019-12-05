@@ -1017,11 +1017,14 @@ input:-webkit-autofill {
     .navbar__menu-item {
       cursor: pointer;
       list-style-type: none;
-      margin: 0 30px;
+      margin: 30px;
       -webkit-transition: -webkit-transform .4s ease;
       transition: -webkit-transform .4s ease;
       transition: transform .4s ease;
       transition: transform .4s ease, -webkit-transform .4s ease; }
+      @media (min-width: 992px) {
+        .navbar__menu-item {
+          margin: 0 30px; } }
       .navbar__menu-item:nth-of-type(even):hover {
         -webkit-transform: scale(1.15) rotate(2deg);
                 transform: scale(1.15) rotate(2deg); }

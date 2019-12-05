@@ -10,6 +10,7 @@ function changeNav() {
         myNav.classList.remove("navbar-background");
     }
 }
+
 function textAppear() {
     let introTexts = Array.from(document.querySelectorAll('.intro-text'));
     let screenPosition = window.innerHeight / 1.2;
@@ -24,8 +25,6 @@ function textAppear() {
 
 function modalShow() {
     let mainEl = document.getElementsByTagName('main')[0];
-    let bodyEl = document.getElementsByTagName('body')[0];
-
     let openLink = document.querySelector('.section__box__modal-link');
     let modalContainer = document.querySelector('.section__box__modal');
     let closeLink = document.querySelector('.modal-close');

@@ -205,7 +205,7 @@
 
         <form method="post" action="data.php" id="contact-form" class="section-form__form">
           <fieldset>
-            <div class="field-group">
+            <div class="section-form__field-group">
               <div class="field--50 input-container field-container">
                 <input required type="text" id="name" class="form-input" data-error="Wypełnij to pole"
                   pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" />
@@ -217,21 +217,21 @@
                 <label class="form__label" for="lastname">Nazwisko</label>
               </div>
             </div>
-            <div class="field-group">
+            <div class="section-form__field-group">
               <div class="field--100 input-container field-container">
                 <input type="email" name="email" class="form-input" required id="email"
                   data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
                 <label class="form__label" for="email">Email</label>
               </div>
             </div>
-            <div class="field-group">
+            <div class="section-form__field-group">
               <div class="field--100 field-container input-container textarea">
                 <textarea id="message" required class="form-input" data-error="Musisz wypełnić pole"
                   pattern=".+"></textarea>
                 <label class="form__label" for="message">Treść wiadomości</label>
               </div>
             </div>
-            <div class="field-group">
+            <div class="section-form__field-group">
               <div class="field--100 field-container agree">
                 <input required type="checkbox" id="agreement" class="custom-checkbox"
                   data-error="Musisz wypełnić pole" />

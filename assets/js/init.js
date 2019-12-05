@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initSlider();
   initForm();
   window.addEventListener('scroll', debounce(() => {
-    changeNav();
     textAppear();
   }, 200));
+  window.addEventListener('scroll', debounce(() => {
+    changeNav();
+  }, 300));
 });

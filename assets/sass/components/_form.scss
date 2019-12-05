@@ -1,176 +1,289 @@
 .section-form {
   background-color: $color-light-bg;
-  font-family: $font-regular;
+  font-weight: $font-regular;
+
   &__form {
     width: 90%;
+
     @include media-up(tablet) {
       width: 580px;
     }
+
     margin: 30px auto 0;
   }
+
   &__heading {
     font-size: $font-18;
   }
+
   &__subheading {
     font-size: $font-15;
   }
-}
 
-.form__label {
-  display: inline-block;
-  color: $color-grey;
-  font-size: 0.9375rem;
-  transition: all .2s ease;
-  z-index: 10;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-}
+  &__field-group {
+    @include flexSetup(column, center, center, nowrap);
 
-.field-group {
-  @include flexSetup(column, center, center, nowrap);
+    @include media-up(tablet) {
+      @include flexSetup(row, center, center, nowrap);
 
-  @include media-up(tablet) {
-    @include flexSetup(row, center, center, nowrap);
+    }
+  }
+
+  & .form__label {
+    display: inline-block;
+    color: $color-grey;
+    font-size: 0.9375rem;
+    transition: all .2s ease;
+    z-index: 10;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  & .field--100 {
+    width: 100%;
+  }
+
+  & .field--50 {
+    width: 100%;
+    margin: 10px 0;
+
+    @include media-up(tablet) {
+      width: 50%;
+    }
+  }
+
+  & .field--50:first-of-type {
+    @include media-up(tablet) {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  & .field--50:nth-of-type(2) {
+    @include media-up(tablet) {
+      margin: 0 0 0 10px;
+    }
+  }
+
+  & .input-container {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    position: relative;
+    background-color: $color-white;
+
+    @include media-up(tablet) {
+      height: 50px;
+    }
+
+    &.textarea {
+      height: 160px;
+    }
+  }
+
+  & .agree {
+    @include flexSetup(row, center, flex-start, nowrap);
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  & input[type="text"] {
+    height: 3.125rem;
+  }
+
+  & .form-input {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    font: 0.9375rem $font-regular;
+    padding: 1.5rem 5px 5px 1rem;
+    color: #000;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    z-index: 20;
+    box-shadow: 0px 2px 8px rgba(145, 154, 159, 0.2);
 
   }
-}
-.field--100 {
-  width: 100%;
-}
-.field--50 {
-  width: 100%;
-  margin: 10px 0;
-  @include media-up(tablet) {
-    width: 50%;
+
+  & textarea {
+    min-height: 160px;
+    font-size: 0.9375rem;
+  }
+
+  & .form-input:focus~label,
+  .form-input:valid~label {
+    top: 14px;
+    font-size: 0.6875rem;
+  }
+
+  & .button-submit {
+    cursor: pointer;
+    margin: 40px auto 0 auto;
+    width: 120px;
+    height: 60px;
+    color: #E0F2F1;
+    font-weight: $font-extrabold;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    padding: 10px 0;
+    background-color: $color-primary-light;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    outline: none;
+    transition: all .3s ease;
+    box-shadow: 0px 2px 8px rgba(145, 154, 159, 0.2);
+  }
+
+  & .button-submit:hover {
+    background: #00a3c6;
+    border: solid #007f9a;
+    border-width: 0 0 4px 0;
+  }
+
+  & .form-input:active,
+  & .form-input:focus {
+    box-shadow: none;
   }
 }
-.field--50:first-of-type {
-  @include media-up(tablet) {
-    margin: 0 10px 0 0;
-  }
-}
-.field--50:nth-of-type(2) {
-  @include media-up(tablet) {
-    margin: 0 0 0 10px;
-  }
-}
 
-.input-container {
-  width: 100%;
-  height: auto;
-  margin: 10px 0;
-  position: relative;
-  background-color: $color-white;
-  @include media-up(tablet) {
-    height: 50px;
-  }
-}
 
-.input-container.textarea {
-  height: 160px;
- }
-.agree  {
-  @include flexSetup(row, center, flex-start, nowrap);
-  background-color: transparent;
-  box-shadow: none;
-}
 
-input[type="text"] {
-  height: 3.125rem;
-}
-.form-input {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  font: 0.9375rem $font-regular;
-  padding: 1.5rem 5px 5px 1rem;
-  color: #000;
-  border: none;
-  background-color: transparent;
-  outline: none;
-  z-index: 20;
-  box-shadow: 0px 2px 8px rgba(145,154,159, 0.2);
+// .field-group {
+//   @include flexSetup(column, center, center, nowrap);
 
-}
-textarea {
-  min-height: 160px;
-  font-size: 0.9375rem;
-}
-.form-input:focus ~ label, .form-input:valid ~ label {
-  top: 14px;
-  font-size: 0.6875rem;
-}
+//   @include media-up(tablet) {
+//     @include flexSetup(row, center, center, nowrap);
 
-.button-submit {
-  cursor: pointer;
-  margin: 40px auto 0 auto;
-  width: 120px;
-  height: 60px;
-  color: #E0F2F1;
-  font-family: $font-extrabold;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  padding: 10px 0;
-  background-color: $color-primary-light;
-  border: 1px solid transparent;
-  border-radius: 50px;
-  outline: none;
-  transition: all .3s ease;
-  box-shadow: 0px 2px 8px rgba(145,154,159, 0.2);
+//   }
+// }
+// .field--100 {
+//   width: 100%;
+// }
+// .field--50 {
+//   width: 100%;
+//   margin: 10px 0;
+//   @include media-up(tablet) {
+//     width: 50%;
+//   }
+// }
+// .field--50:first-of-type {
+//   @include media-up(tablet) {
+//     margin: 0 10px 0 0;
+//   }
+// }
+// .field--50:nth-of-type(2) {
+//   @include media-up(tablet) {
+//     margin: 0 0 0 10px;
+//   }
+// }
 
-}
 
-.button-submit:hover {
-  background: #00a3c6;
-  border: solid #007f9a;
-  border-width: 0 0 4px 0;
-}
-.form-input:active,
-.form-input:focus {
-  box-shadow: none;
-}
+
+// .input-container.textarea {
+//   height: 160px;
+//  }
+// .agree  {
+//   @include flexSetup(row, center, flex-start, nowrap);
+//   background-color: transparent;
+//   box-shadow: none;
+// }
+
+// input[type="text"] {
+//   height: 3.125rem;
+// }
+// .form-input {
+//   width: 100%;
+//   position: relative;
+//   display: inline-block;
+//   font: 0.9375rem $font-regular;
+//   padding: 1.5rem 5px 5px 1rem;
+//   color: #000;
+//   border: none;
+//   background-color: transparent;
+//   outline: none;
+//   z-index: 20;
+//   box-shadow: 0px 2px 8px rgba(145,154,159, 0.2);
+
+// }
+// textarea {
+//   min-height: 160px;
+//   font-size: 0.9375rem;
+// }
+// .form-input:focus ~ label, .form-input:valid ~ label {
+//   top: 14px;
+//   font-size: 0.6875rem;
+// }
+
+// .button-submit {
+//   cursor: pointer;
+//   margin: 40px auto 0 auto;
+//   width: 120px;
+//   height: 60px;
+//   color: #E0F2F1;
+//   font-weight: $font-extrabold;
+//   font-size: 0.875rem;
+//   text-transform: uppercase;
+//   padding: 10px 0;
+//   background-color: $color-primary-light;
+//   border: 1px solid transparent;
+//   border-radius: 50px;
+//   outline: none;
+//   transition: all .3s ease;
+//   box-shadow: 0px 2px 8px rgba(145,154,159, 0.2);
+
+// }
+
+// .button-submit:hover {
+//   background: #00a3c6;
+//   border: solid #007f9a;
+//   border-width: 0 0 4px 0;
+// }
+// .form-input:active,
+// .form-input:focus {
+//   box-shadow: none;
+// }
 // .button-submit:active {
 //   background: #009688;
 //   border: solid transparent;
 //   border-width: 0 0 4px 0;
 // }
-.success {
-  display: none;
-}
 
-/* ---------------------------------------------------- */
-/* walidacja formularza */
-/* ---------------------------------------------------- */
+// Form validation //
+
 .section-form__form input[type=text].error,
 .section-form__form input[type=email].error,
 .section-form__form textarea.error,
-.section-form__form .checkbox-cnt input.error ~ .state {
+.section-form__form .checkbox-cnt input.error~.state {
   border: 1px solid #ff4148;
   color: #ff4148;
 }
+
 .field-container {
   position: relative;
 }
+
 .field-error {
-    color: #ff4148;
-    padding:.5rem 0;
-    font-size:.7rem;
-    position: absolute;
-    bottom: 0;
-    right: 10px;
+  color: #ff4148;
+  padding: .5rem 0;
+  font-size: .7rem;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
+
 .agree .field-error {
   bottom: -2rem;
 }
-// Disable submit button while loading
-.button-submit.element-is-busy {
+
+// Disable submit button while loading //
+.button-submit.element-disabled {
   position: relative;
   pointer-events: none;
-  opacity:0.5;
+  opacity: 0.5;
 }
 
-.button-submit.element-is-busy::after {
+.button-submit.element-disabled {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -178,36 +291,29 @@ textarea {
   height: 20px;
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.2);
-  border-right-color: rgba(0,0,0,0.7);
+  border-right-color: rgba(0, 0, 0, 0.7);
   transform: translate(-50%, -50%) rotate(0deg);
-  content:'';
+  content: '';
   animation: rotateSingleLoading 0.3s infinite linear;
   z-index: 10;
 }
 
-@keyframes rotateSingleLoading {
-  from {
-      transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-      transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
+// Custom input checkbox styling //
 
-/*
- <input type="checkbox" class="custom-checkbox" id="x"><label class="custom-label" for="x">...</label>
- */
- .custom-label {
+.custom-label {
   position: relative;
   display: inline-flex;
   align-items: center;
   padding-left: 28px;
   cursor: pointer;
 }
-.custom-label::after, .custom-label::before {
+
+.custom-label::after,
+.custom-label::before {
   position: absolute;
   content: '';
 }
+
 .custom-label::after {
   top: 3px;
   left: 0;
@@ -216,26 +322,28 @@ textarea {
   border: 1px solid #cfcfcf;
   background: #fff;
 }
-/*
- custom background for single custom post background 
- */
+
 .custom-label {
   padding-left: 20px;
 }
+
 .custom-label::after {
   background: #fff;
   top: 1px;
-  box-shadow:inset 0 0 1px 1px rgba(139,145,151,.1);
+  box-shadow: inset 0 0 1px 1px rgba(139, 145, 151, .1);
 }
+
 .custom-checkbox {
   position: absolute;
   opacity: 0;
 }
-.custom-checkbox:checked + .custom-label::after {
+
+.custom-checkbox:checked+.custom-label::after {
   background: #fff;
 
 }
-.custom-checkbox:checked + .custom-label::before {
+
+.custom-checkbox:checked+.custom-label::before {
   top: 4px;
   left: 5px;
   width: 5px;
@@ -245,9 +353,11 @@ textarea {
   transform: rotate(45deg);
   z-index: 2;
 }
-.custom-checkbox:disabled + .custom-label::after {
+
+.custom-checkbox:disabled+.custom-label::after {
   background: #eee;
 }
-.custom-checkbox:disabled + .custom-label::before {
+
+.custom-checkbox:disabled+.custom-label::before {
   display: none;
 }

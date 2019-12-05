@@ -78,7 +78,7 @@ function initForm() {
       [...elements].forEach(el => dataToSend.append(el.name, el.value));
       const submit = form.querySelector('[type="submit"]');
       submit.disabled = true;
-      submit.classList.add('element-is-busy');
+      submit.classList.add('element-disabled');
 
       const url = form.getAttribute('action');
       const method = form.getAttribute('method');
@@ -90,7 +90,7 @@ function initForm() {
         .then(ret => ret.json())
         .then(ret => {
           submit.disabled = false;
-          submit.classList.remove('element-is-busy');
+          submit.classList.remove('element-disabled');
 
           if (ret.errors) {
             ret.errors.map(function (el) {
@@ -119,7 +119,7 @@ function initForm() {
           }
         }).catch(_ => {
           submit.disabled = false;
-          submit.classList.remove('element-is-busy');
+          submit.classList.remove('element-disabled');
         });
     }
   });

@@ -1,20 +1,38 @@
-
 // Scroll button animation
 .scroll-bottom-animation {
-animation-name: light-bounce;
-animation-duration: 1s; /* or: Xms */
-animation-iteration-count: infinite;
-animation-direction: alternate; /* or: normal */
-animation-timing-function:ease; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
-animation-fill-mode: forwards; /* or: backwards, both, none */
-animation-delay: 0s; /* or: Xms */
+    animation-name: light-bounce;
+    animation-duration: 1s;
+    /* or: Xms */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* or: normal */
+    animation-timing-function: ease;
+    /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+    animation-fill-mode: forwards;
+    /* or: backwards, both, none */
+    animation-delay: 0s;
+    /* or: Xms */
 
 }
+
 @keyframes light-bounce {
     0% {
         transform: translateY(-25%);
     }
+
     100% {
         transform: translateY(0);
+    }
+}
+
+// Form submit button  animation
+
+@keyframes rotateSingleLoading {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }

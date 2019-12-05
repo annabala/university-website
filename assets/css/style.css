@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap&subset=latin-ext");
 .scroll-bottom-animation {
   -webkit-animation-name: light-bounce;
           animation-name: light-bounce;
@@ -35,6 +36,22 @@
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
 
+@-webkit-keyframes rotateSingleLoading {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes rotateSingleLoading {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
 *, *::after, *::before {
   box-sizing: border-box; }
 
@@ -57,36 +74,13 @@ html, body {
     .container {
       max-width: 1187px; } }
 
-@font-face {
-  font-family: 'Muli';
-  src: url("/assets/fonts/Muli-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-extralight';
-  src: url("/assets/fonts/Muli-ExtraLight.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-light';
-  src: url("/assets/fonts/Muli-Light.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-semi';
-  src: url("/assets/fonts/Muli-SemiBold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-bold';
-  src: url("/assets/fonts/Muli-Bold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-extrabold';
-  src: url("/assets/fonts/Muli-ExtraBold.ttf") format("truetype"); }
-
 body,
 html {
   font-family: "Muli", sans-serif; }
 
 .h2 {
-  font-family: "Muli-extrabold";
+  font-family: "Muli", sans-serif;
+  font-weight: 800;
   font-size: 2.25rem; }
 
 p {
@@ -245,7 +239,7 @@ input:-webkit-autofill {
       bottom: 200px;
       position: absolute;
       background-color: transparent;
-      font-family: "Muli-extralight";
+      font-weight: 200;
       display: -webkit-box;
       display: flex;
       -webkit-box-orient: vertical;
@@ -269,8 +263,7 @@ input:-webkit-autofill {
         .carousel__item-text {
           font-size: 2.5rem; } }
       .carousel__item-text.h1 {
-        font-family: "Muli-extralight";
-        font-weight: 300;
+        font-weight: 200;
         margin: 0 0 20px 0;
         width: 100%; }
       .carousel__item-text.p-color {
@@ -306,7 +299,7 @@ input:-webkit-autofill {
       border-radius: 50px;
       background-color: transparent;
       font-size: 0.875rem;
-      font-family: "Muli-extrabold";
+      font-weight: 800;
       color: #fff;
       text-transform: uppercase;
       -webkit-transition: all .3s ease;
@@ -420,7 +413,7 @@ input:-webkit-autofill {
 
 .section-form {
   background-color: #f5f8fa;
-  font-family: "Muli", sans-serif; }
+  font-weight: 400; }
   .section-form__form {
     width: 90%;
     margin: 30px auto 0; }
@@ -431,144 +424,123 @@ input:-webkit-autofill {
     font-size: 1.125rem; }
   .section-form__subheading {
     font-size: 0.9375rem; }
-
-.form__label {
-  display: inline-block;
-  color: #91a5b3;
-  font-size: 0.9375rem;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-  z-index: 10;
-  position: absolute;
-  top: 1rem;
-  left: 1rem; }
-
-.field-group {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
-  flex-wrap: nowrap; }
+  .section-form__field-group {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    flex-wrap: nowrap; }
+    @media (min-width: 767px) {
+      .section-form__field-group {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
+        -webkit-box-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+                align-items: center;
+        flex-wrap: nowrap; } }
+  .section-form .form__label {
+    display: inline-block;
+    color: #91a5b3;
+    font-size: 0.9375rem;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    z-index: 10;
+    position: absolute;
+    top: 1rem;
+    left: 1rem; }
+  .section-form .field--100 {
+    width: 100%; }
+  .section-form .field--50 {
+    width: 100%;
+    margin: 10px 0; }
+    @media (min-width: 767px) {
+      .section-form .field--50 {
+        width: 50%; } }
   @media (min-width: 767px) {
-    .field-group {
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-              flex-direction: row;
-      -webkit-box-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-              align-items: center;
-      flex-wrap: nowrap; } }
-
-.field--100 {
-  width: 100%; }
-
-.field--50 {
-  width: 100%;
-  margin: 10px 0; }
+    .section-form .field--50:first-of-type {
+      margin: 0 10px 0 0; } }
   @media (min-width: 767px) {
-    .field--50 {
-      width: 50%; } }
+    .section-form .field--50:nth-of-type(2) {
+      margin: 0 0 0 10px; } }
+  .section-form .input-container {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    position: relative;
+    background-color: #fff; }
+    @media (min-width: 767px) {
+      .section-form .input-container {
+        height: 50px; } }
+    .section-form .input-container.textarea {
+      height: 160px; }
+  .section-form .agree {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    flex-wrap: nowrap;
+    background-color: transparent;
+    box-shadow: none; }
+  .section-form input[type="text"] {
+    height: 3.125rem; }
+  .section-form .form-input {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    font: 0.9375rem 400;
+    padding: 1.5rem 5px 5px 1rem;
+    color: #000;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    z-index: 20;
+    box-shadow: 0px 2px 8px rgba(145, 154, 159, 0.2); }
+  .section-form textarea {
+    min-height: 160px;
+    font-size: 0.9375rem; }
+  .section-form .form-input:focus ~ label,
+  .section-form .form-input:valid ~ label {
+    top: 14px;
+    font-size: 0.6875rem; }
+  .section-form .button-submit {
+    cursor: pointer;
+    margin: 40px auto 0 auto;
+    width: 120px;
+    height: 60px;
+    color: #E0F2F1;
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    padding: 10px 0;
+    background-color: #00b6dc;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    outline: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    box-shadow: 0px 2px 8px rgba(145, 154, 159, 0.2); }
+  .section-form .button-submit:hover {
+    background: #00a3c6;
+    border: solid #007f9a;
+    border-width: 0 0 4px 0; }
+  .section-form .form-input:active,
+  .section-form .form-input:focus {
+    box-shadow: none; }
 
-@media (min-width: 767px) {
-  .field--50:first-of-type {
-    margin: 0 10px 0 0; } }
-
-@media (min-width: 767px) {
-  .field--50:nth-of-type(2) {
-    margin: 0 0 0 10px; } }
-
-.input-container {
-  width: 100%;
-  height: auto;
-  margin: 10px 0;
-  position: relative;
-  background-color: #fff; }
-  @media (min-width: 767px) {
-    .input-container {
-      height: 50px; } }
-
-.input-container.textarea {
-  height: 160px; }
-
-.agree {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-          align-items: flex-start;
-  flex-wrap: nowrap;
-  background-color: transparent;
-  box-shadow: none; }
-
-input[type="text"] {
-  height: 3.125rem; }
-
-.form-input {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  font: 0.9375rem "Muli", sans-serif;
-  padding: 1.5rem 5px 5px 1rem;
-  color: #000;
-  border: none;
-  background-color: transparent;
-  outline: none;
-  z-index: 20;
-  box-shadow: 0px 2px 8px rgba(145, 154, 159, 0.2); }
-
-textarea {
-  min-height: 160px;
-  font-size: 0.9375rem; }
-
-.form-input:focus ~ label, .form-input:valid ~ label {
-  top: 14px;
-  font-size: 0.6875rem; }
-
-.button-submit {
-  cursor: pointer;
-  margin: 40px auto 0 auto;
-  width: 120px;
-  height: 60px;
-  color: #E0F2F1;
-  font-family: "Muli-extrabold";
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  padding: 10px 0;
-  background-color: #00b6dc;
-  border: 1px solid transparent;
-  border-radius: 50px;
-  outline: none;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  box-shadow: 0px 2px 8px rgba(145, 154, 159, 0.2); }
-
-.button-submit:hover {
-  background: #00a3c6;
-  border: solid #007f9a;
-  border-width: 0 0 4px 0; }
-
-.form-input:active,
-.form-input:focus {
-  box-shadow: none; }
-
-.success {
-  display: none; }
-
-/* ---------------------------------------------------- */
-/* walidacja formularza */
-/* ---------------------------------------------------- */
 .section-form__form input[type=text].error,
 .section-form__form input[type=email].error,
 .section-form__form textarea.error,
@@ -590,12 +562,12 @@ textarea {
 .agree .field-error {
   bottom: -2rem; }
 
-.button-submit.element-is-busy {
+.button-submit.element-disabled {
   position: relative;
   pointer-events: none;
   opacity: 0.5; }
 
-.button-submit.element-is-busy::after {
+.button-submit.element-disabled {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -611,25 +583,6 @@ textarea {
           animation: rotateSingleLoading 0.3s infinite linear;
   z-index: 10; }
 
-@-webkit-keyframes rotateSingleLoading {
-  from {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg); }
-  to {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg); } }
-
-@keyframes rotateSingleLoading {
-  from {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg); }
-  to {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg); } }
-
-/*
- <input type="checkbox" class="custom-checkbox" id="x"><label class="custom-label" for="x">...</label>
- */
 .custom-label {
   position: relative;
   display: -webkit-inline-box;
@@ -639,7 +592,8 @@ textarea {
   padding-left: 28px;
   cursor: pointer; }
 
-.custom-label::after, .custom-label::before {
+.custom-label::after,
+.custom-label::before {
   position: absolute;
   content: ''; }
 
@@ -651,9 +605,6 @@ textarea {
   border: 1px solid #cfcfcf;
   background: #fff; }
 
-/*
- custom background for single custom post background 
- */
 .custom-label {
   padding-left: 20px; }
 
@@ -778,7 +729,7 @@ textarea {
   flex-wrap: nowrap;
   padding: 2rem 0;
   min-height: 460px;
-  font-family: "Muli", sans-serif;
+  font-family: 400;
   font-size: 0.9375rem;
   background-color: #001927;
   color: #fff;
@@ -890,7 +841,7 @@ textarea {
         max-width: 70%; } }
     .footer-box__menu__item {
       margin: 10px 0;
-      font-family: "Muli-extrabold";
+      font-family: 800;
       font-size: 1.125rem;
       cursor: pointer;
       position: relative;
@@ -898,7 +849,7 @@ textarea {
       @media (min-width: 767px) {
         .footer-box__menu__item {
           font-size: 0.9375rem;
-          font-family: "Muli", sans-serif;
+          font-family: 400;
           width: auto; } }
       .footer-box__menu__item::after {
         content: url("/assets/img/arrow-down.svg");
@@ -922,7 +873,7 @@ textarea {
           margin: 10px 10px 10px 0; } }
       @media (min-width: 992px) {
         .footer-box__menu__item {
-          font-family: "Muli", sans-serif;
+          font-family: 400;
           cursor: default; } }
       .footer-box__menu__item .submenu {
         margin: 15px 0 0 0;
@@ -940,7 +891,7 @@ textarea {
           margin: 8px 0;
           font-size: 0.9375rem;
           color: #fff;
-          font-family: "Muli", sans-serif; }
+          font-family: 400; }
           @media (min-width: 767px) {
             .footer-box__menu__item .submenu li a {
               margin: 12px 0; } }
@@ -970,7 +921,7 @@ textarea {
   z-index: 100;
   -webkit-transition: background-color .4s ease;
   transition: background-color .4s ease; }
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     .navbar {
       background-color: rgba(0, 0, 0, 0); } }
   .navbar-background {

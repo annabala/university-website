@@ -144,6 +144,9 @@ address {
   -webkit-transform: translateY(0);
           transform: translateY(0); }
 
+.hide-scroll {
+  overflow: hidden; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -646,7 +649,7 @@ input:-webkit-autofill {
     cursor: pointer;
     position: absolute;
     right: 50%;
-    top: 45%;
+    top: 20%;
     -webkit-transform: translate(50%, 0%);
             transform: translate(50%, 0%);
     color: #E0F2F1;
@@ -696,6 +699,23 @@ input:-webkit-autofill {
     -webkit-filter: brightness(0.5);
             filter: brightness(0.5); }
 
+.section__box__modal .iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0; }
+  .section__box__modal .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    @media (min-width: 767px) {
+      .section__box__modal .iframe-container iframe {
+        width: 500px;
+        height: 300px; } }
+
 .section__box__modal.section__box__modal-open .modal {
   display: block;
   width: 100%;
@@ -710,8 +730,8 @@ input:-webkit-autofill {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%); }
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
 
 .section__box__modal.section__box__modal-open .section__box__modal-link::before {
   z-index: 0; }
@@ -1146,7 +1166,7 @@ input:-webkit-autofill {
   .section__box__list-item {
     margin: 0 0 25px 25px; }
     .section__box__list-item::before {
-      content: url("assets/img/arrow.png");
+      content: url("../img/arrow.png");
       display: inline-block;
       margin-left: -1.3em;
       width: 1.3em; }

@@ -8,7 +8,7 @@
       cursor: pointer;
       position: absolute;
       right: 50%;
-      top: 45%;
+      top: 20%;
       transform: translate(50%, 0%);
       color: #E0F2F1;
       font-family: "Muli-semibold";
@@ -54,6 +54,23 @@
       filter: brightness(0.5);
     }
   }
+  & .iframe-container {
+    position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+      & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include media-up(tablet) {
+          width: 500px;
+          height: 300px;
+        }
+      }
+  }
 }
 .section__box__modal.section__box__modal-open {
   & .modal {
@@ -66,7 +83,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, 0%);
+      transform: translate(-50%, -50%);
     }
   }
   & .section__box__modal-link {
